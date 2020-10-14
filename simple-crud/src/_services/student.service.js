@@ -1,15 +1,14 @@
 import Axios from 'axios';
-import axio from 'axios';
 import config from '../config/config';
 
 export const studentService = {
-    get,
+    getAll,
     post,
     put,
     deleteStudent
 };
 
-function get(){
+function getAll(){
     return Axios.get(config.baseUrl+students).then((response)=>{
         return response;
     }).catch((err)=>{
